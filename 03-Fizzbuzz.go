@@ -4,24 +4,28 @@
 package main
 
 import 
-
+(
 	// Formatted I/O import
 	"fmt"
-
-
+)
 func main (){
-	var count int
+	var i int = 1
 	
-	for count <= 100{
-		count++
+	for i <= 100{
+		
 
-		if count % 3{
-			fmt.Println("Fizz")
-		}
+		//if else block to print fizz, buzz and fizzbuzz
+		if (i % 3 == 0 && i % 5 == 0) {
+            fmt.Println("Fizzbuzz")
+		} else if (i % 3 == 0) {
+            fmt.Println("Fizz")
+		} else if (i % 5 == 0) {
+            fmt.Println("Buzz")
+		} else {
+            fmt.Println(i)
+        }
+		i += 1
+	}// end for 
 
-
-		fmt.Println(count)
-	}
-
-}
+}//end func main
 
