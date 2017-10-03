@@ -1,31 +1,25 @@
-// Eoghan O'Connor 2017
-// This program was written with help from http://wiki.c2.com/?FizzBuzzTest
+//Eoghan O'Connor 2017
+//Adapted from https://graysonkoonce.com/fizzbuzz-in-golang/
+
 
 package main
 
-import 
-(
-	// Formatted I/O import
-	"fmt"
-)
-func main (){
-	var i int = 1
-	
-	for i <= 100{
-		
+import "fmt" // Formated I/O import 
 
-		//if else block to print fizz, buzz and fizzbuzz
-		if (i % 3 == 0 && i % 5 == 0) {
-            fmt.Println("Fizzbuzz")
-		} else if (i % 3 == 0) {
+func main() {  
+
+	// for loop to print out numbers 1 to 100
+    for i := 1; i <= 100; i++ {
+
+		// if else if else code block to decide what to print out
+		if i%15 == 0 {
+            fmt.Println("FizzBuzz")
+        } else if i%3 == 0 {
             fmt.Println("Fizz")
-		} else if (i % 5 == 0) {
+        } else if i%5 == 0 {
             fmt.Println("Buzz")
-		} else {
+        } else {
             fmt.Println(i)
-        }
-		i += 1
-	}// end for 
-
-}//end func main
-
+        }// end if else if else code block
+    }// end for loop
+}//end func main 
